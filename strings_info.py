@@ -156,3 +156,16 @@ print('in operator: ' + str("dog" in text))  # Check if substring exists
 # Check if substring does not exist
 print('not in operator: ' + str("cat" not in text))
 print("\n")
+
+# ---------- Trick Questions ----------
+fruit = "Apple"
+print('fruit: ' + fruit)
+# string[start:end]
+# start → the index to begin from (inclusive)
+# end → the index to stop before(exclusive)
+# fruit[1:-1]
+# means:
+# start at index 1 → 'p'
+# Stop before index - 1 → 'e' (not included)
+# 👉 Therefore, it includes indices 1, 2, 3 → "ppl"
+print('fruit[1:-1]: ' + fruit[1:-1])      # Last character

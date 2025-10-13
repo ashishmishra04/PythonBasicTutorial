@@ -1,3 +1,6 @@
+# File: intput_data.py
+# This script demonstrates various ways to take input from users
+# and convert that input into different Python data types.
 import ast
 
 
