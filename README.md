@@ -5,17 +5,16 @@ Welcome to the **Python Basic Tutorial**! This project demonstrates the fundamen
 
 ---
 
-## Table of Contents
-- [Variables and Data Types](#variables-and-data-types)
-- [Numbers](#numbers)
-- [Strings](#strings)
-- [Booleans and None](#booleans-and-none)
-- [Input and Type Conversion](#input-and-type-conversion)
-- [Built-in Functions and Advanced Types](#built-in-functions-and-advanced-types)
+- [Variables and Data Types](#variables-and-data-types-1_variables_infopy)
+- [Numbers](#numbers-2_numbers_infopy)
+- [Strings](#strings-3_strings_infopy)
+- [Booleans and None](#booleans-and-none-4_boolean_infopy)
+- [Input and Type Conversion](#input-and-type-conversion-5_intput_datapy)
+- [Control Flow](#control-flow-6_control_flowpy)
+- [Functions](#functions-7_functionspy)
+- [Main Program](#main-program-apppy)
 
----
-
-## Variables and Data Types (`variables_info.py`)
+## Variables and Data Types ([`1_variables_info.py`](./1_variables_info.py))
 Demonstrates Python's basic and advanced data types:
 
 - **int, float, complex**: Numeric types
@@ -31,7 +30,7 @@ Demonstrates Python's basic and advanced data types:
 
 ---
 
-## Numbers (`numbers_info.py`)
+## Numbers ([`2_numbers_info.py`](./2_numbers_info.py))
 Shows how to work with numbers in Python:
 
 - **Integer, float, complex** types
@@ -42,7 +41,7 @@ Shows how to work with numbers in Python:
 
 ---
 
-## Strings (`strings_info.py`)
+## Strings ([`3_strings_info.py`](./3_strings_info.py))
 Explores string operations and methods:
 
 - String creation, length, indexing, and slicing
@@ -54,7 +53,7 @@ Explores string operations and methods:
 
 ---
 
-## Booleans and None (`boolean_info.py`)
+## Booleans and None ([`4_boolean_info.py`](./4_boolean_info.py))
 Demonstrates Boolean logic and the `None` type:
 
 - Boolean values: `True`, `False`
@@ -66,7 +65,15 @@ Demonstrates Boolean logic and the `None` type:
 
 ---
 
-## Input and Type Conversion (`intput_data.py`)
+## Input and Type Conversion ([`5_intput_data.py`](./5_intput_data.py))
+## Control Flow ([`6_control_flow.py`](./6_control_flow.py))
+Demonstrates Python's control flow statements such as if, elif, else, for, while, and break/continue/pass usage.
+
+---
+## Functions ([`7_functions.py`](./7_functions.py))
+Shows how to define and use functions in Python, including arguments, return values, default parameters, and docstrings.
+
+---
 Shows how to take user input and convert it to various types:
 
 - Using `input()` to read strings
@@ -77,7 +84,7 @@ Shows how to take user input and convert it to various types:
 ---
 
 ## Built-in Functions and Advanced Types
-See `variables_info.py` for examples of:
+See [`variables_info.py`](./variables_info.py) for examples of:
 
 - Reflection: `globals()`, `locals()`, `dir()`
 - Dynamic code: `eval()`, `exec()`, `compile()`
@@ -89,7 +96,7 @@ See `variables_info.py` for examples of:
 
 ---
 
-## Main Program (`app.py`)
+## Main Program ([`app.py`](./app.py))
 The main script imports all the above modules and prints a welcome message. Each module demonstrates its topic with print statements and examples.
 
 ---
