@@ -147,9 +147,127 @@ print('letters after extend([\'g\', \'h\']): ' + str(letters))
 del letters[0]  # Deleting first element
 print('letters after del letters[0]: ' + str(letters))
 # letters after del letters[0]: ['a', 'b', 'd', 'e', 'g', 'h']
+del letters[1:3]  # Deleting a slice
+# this will delete 'b' and 'd' index 1 and 2
+print('letters after del letters[1:3]: ' + str(letters))
+# letters after del letters[1:3]: ['a', 'e', 'g', 'h']
+letters.clear()  # Clearing the list
+print('letters after clear(): ' + str(letters))
+# letters after clear(): []
 print("\n")
 
 #########################################################
 # find items in Data Structures
-print('Is \'a\' in letters? ' + str('a' in letters))
-# Is 'a' in letters? True
+letters = ['a', 'b', 'c', 'd', 'e']
+print('letters: ' + str(letters))
+# find item in Data Structures
+print('find a item exits \'d\' in letters: False' + 'd' in letters)
+# find a item exits 'd' in letters: True
+print('Index of \'c\' in letters: letters.index(\'c\'): 2' + str(letters.index('c')))
+# Index of 'c' in letters: 2
+print('count of \'e\' in letters: letters.count(\'e\'): 1' + str(letters.count('e')))
+# count of 'e' in letters: 1
+print("\n")
+
+#########################################################
+# sorting Data Structures
+numbers = [5, 2, 9, 1, 5, 6]
+print('numbers before sort(): ' + str(numbers))
+# numbers before sort(): [5, 2, 9, 1, 5, 6]
+numbers.sort()  # Sorting the list
+print('numbers after sort(): ' + str(numbers))
+# numbers after sort(): [1, 2, 5, 5, 6, 9]
+
+# sort parameters: reverse=True for descending order
+numbers.sort(reverse=True)
+print('numbers after sort(reverse=True): ' + str(numbers))
+# numbers after sort(reverse=True): [9, 6, 5, 5, 2, 1]
+numbers.reverse()  # Reversing the list
+print('numbers after reverse(): ' + str(numbers))
+# numbers after reverse(): [9, 6, 5, 5, 2, 1]
+sorted_numbers = sorted(numbers)  # Using sorted() function
+print('sorted_numbers using sorted(): ' + str(sorted_numbers))
+# sorted_numbers using sorted(): [1, 2, 5, 5, 6, 9]
+sorted_numbers = sorted(numbers, reverse=True)  # Descending order
+print('sorted_numbers using sorted(reverse=True): ' + str(sorted_numbers))
+# sorted_numbers using sorted(reverse=True): [9, 6, 5, 5, 2, 1]
+
+# sort list of tuples based on second element
+tuples_list = [(1, 'b'), (3, 'a'), (2, 'c')]
+print('tuples_list before sort(): ' + str(tuples_list))
+# by calling a function
+
+
+def sort_by_second_element(item):
+    return item[1]
+
+
+tuples_list.sort(key=sort_by_second_element)
+print('tuples_list sorted by second element using function: ' + str(tuples_list))
+
+tuples_list = [(1, 'b'), (2, 'a'), (3, 'c')]
+print('tuples_list before sort(): ' + str(tuples_list))
+# by lambda function
+# by lamda function tuples_list.sort(key=lambda parameters: expression)
+tuples_list.sort(key=lambda x: x[1])
+print('tuples_list sorted by second element: ' + str(tuples_list))
+print("\n")
+
+#########################################################
+# Map function to extract items from Data Structures
+fruits_prices = [
+    ('apple', 23),
+    ('banana', 30),
+    ('orange', 10)
+]
+print('fruits_prices: ' + str(fruits_prices))
+# fruits_prices: [('apple', 23), ('banana', 30), ('orange', 10)]
+
+# Using map to print fruit names and prices
+map(lambda item: print('Fruit: ' +
+    item[0] + ', Price: ' + str(item[1])), fruits_prices)
+# Fruit: apple, Price: 23
+# Fruit: banana, Price: 30
+# Fruit: orange, Price: 10
+
+# Extracting prices using map and lambda
+prices = list(map(lambda item: item[1], fruits_prices))  # Extracting prices
+print(
+    'Prices using map and lambda: list(map(lambda parameters: expression, list):' + str(prices))
+# Prices using map and lambda: [23, 30, 10]
+print("\n")
+
+#########################################################
+# Filter function to filter items from Data Structures
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print('numbers: ' + str(numbers))
+# numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# Using filter to get even numbers
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print('Even numbers using filter and lambda: ' + str(even_numbers))
+# Even numbers using filter and lambda: [2, 4, 6, 8, 10]
+
+# fruits with price greater than 20
+expensive_fruits = list(
+    filter(lambda item: item[1] > 20, fruits_prices))
+print('Expensive fruits (price > 20): ' + str(expensive_fruits))
+# Expensive fruits (price > 20): [('apple', 23), ('banana', 30)]
+print("\n")
+
+##########################################################
+# List Comprehensions [expression for item in iterable if condition]
+squares = [x**2 for x in range(1, 11)]  # Squares of numbers from 1 to 10
+print('squares using list comprehension: ' + str(squares))
+# squares using list comprehension: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+even_squares = [x**2 for x in range(1, 11) if x % 2 == 0]  # Even squares
+print('even_squares using list comprehension: ' + str(even_squares))
+# even_squares using list comprehension: [4, 16, 36, 64, 100]
+expensive_fruits_names = [
+    # Names of expensive fruits
+    item[0] for item in fruits_prices if item[1] > 20]
+print('Names of expensive fruits using list comprehension: ' +
+      str(expensive_fruits_names))
+# Names of expensive fruits using list comprehension: ['apple', 'banana']
+print("\n")
+
+##########################################################
